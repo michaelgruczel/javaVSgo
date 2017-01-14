@@ -1,0 +1,88 @@
+{
+  "swagger": "2.0",
+  "paths": {
+    "/message": {
+      "post": {
+        "description": "This will add a message",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "schemes": [
+          "http"
+        ],
+        "tags": [
+          "add"
+        ],
+        "parameters": {
+          
+           "body": {
+               "name": "body",
+               "in": "body",
+               "description": "message",
+               "required": true,
+               "$ref": "#/definitions/Message",
+               "schema": {
+                   "$ref": "#/definitions/Message"
+               }
+           }
+          
+        },
+        "summary": "Adds a message.",
+        "operationId": "message",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/someResponse"
+          },
+          "default": {
+            "$ref": "#/responses/genericError"
+          }
+        }
+      }
+    },
+    "/messages": {
+      "get": {
+        "description": "This will list all messages",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "schemes": [
+          "http"
+        ],
+        "tags": [
+          "list"
+        ],
+        "summary": "Lists messages.",
+        "operationId": "messages",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/someResponse"
+          },
+          "default": {
+            "$ref": "#/responses/genericError"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+
+    "Message": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+      	
+  }
+}
