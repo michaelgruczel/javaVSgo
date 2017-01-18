@@ -1,5 +1,7 @@
 # javaVSgo
 
+![travis status](https://travis-ci.org/michaelgruczel/javaVSgo.svg?branch=master)
+
 This repo is just a playground to compare go to java (spring boot) a little bit
 by a very simple example. 
 
